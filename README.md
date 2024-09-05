@@ -3,11 +3,11 @@
 This project is a simple Ping Pong game built with a JavaScript frontend for the game interface and a Python backend for managing game logic and real-time scoring.
 
 ## Features
-- **2 player
-- **'w' and 's' for Player 1
-- **Up and Down arrows for Player 2
-- **Keeps Score
-- **Ability to increase ball speed
+- 2 player
+- 'w' and 's' for Player 1
+- Up and Down arrows for Player 2
+- Keeps Score
+- Ability to increase ball speed
 
 ## Tech Stack
 - **Frontend**: JavaScript, HTML5, CSS
