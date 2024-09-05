@@ -1,10 +1,11 @@
 const canvas = document.getElementById("gameCanvas");
 const Score1 = document.getElementById("score1");
 const Score2 = document.getElementById("score2");
+const play = document.getElementById("playButton");
 const ctx = canvas.getContext("2d");
 // Paddle dimensionsconst
 paddleWidth = 10;
-const paddleHeight = 100;
+const paddleHeight = 75;
 // Ball dimensions
 const ballSize = 10;
 // Initial positions
@@ -12,8 +13,8 @@ let paddle1Y = canvas.height / 2 - paddleHeight / 2;
 let paddle2Y = canvas.height / 2 - paddleHeight / 2;
 let ballX = canvas.width / 2;
 let ballY = canvas.height / 2;
-let ballSpeedX = 2;
-let ballSpeedY = 2.5;
+let ballSpeedX = 4;
+let ballSpeedY = 5;
 let score1 = 0;
 let score2 = 0;
 
@@ -22,8 +23,9 @@ let upPressed1 = false;
 let downPressed1 = false;
 let upPressed2 = false;
 let downPressed2 = false;
+let gameOver = 10;
 // Paddle movement speed
-const paddleSpeed = 4;
+const paddleSpeed = 3;
 // Event listeners
 document.addEventListener("keydown", (e) => {
   if (e.key === "w") upPressed1 = true;
@@ -90,4 +92,7 @@ function update() {
   ctx.fill();
 }
 // Update the game at 60 frames per second
-setInterval(update, 1000 / 60);
+play.onclick = function () {
+  setInterval(update, 1000 / 60);
+  play.innerHTML = "Faster!";
+};
